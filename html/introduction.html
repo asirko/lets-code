@@ -127,11 +127,11 @@ Les balises ne sont pas toujours suffisantes seules. Elles ont parfois besoin d'
 supplémentaires ...
 
 Un exemple : pour faire un lien entre 2 pages, il existe la balise <a>.
-Question, si j'écris <a>Un lien</a> savez vous quel est la page de destinantion de "Un lien" ??
-Vous ne devrier pas savoir.
+Question, si j'écris <a>Un lien</a> savez vous quel est la page de destinantion de "Un lien" ?
+Normalement, vous ne devriez pas savoir ...
 
 Pour qu'une balise porte plus d'information que son seul nom, on peut lui ajouter des arguments.
-Les arguments ajoutes des informations supplémentaires et spécifique à une balise.
+Les arguments ajoutent des informations supplémentaires et spécifique à une balise.
 
 Reprenons notre exemple de la balise <a>, elle possède un argument très utile : href (pour hyperlink 
 reference). En renseignant la valeur de cet argument, on pourra explicitement désigner l'adresse vers 
@@ -164,14 +164,19 @@ D'abord, une page html possède une structure de base imposé :
 	
 <!doctype html>
 <html>
-	<head></head>
-	<body></body>
+	<head>
+		<title>a</title>
+	</head>
+	<body>
+
+	</body>
 </html>
 
 Dans cette structure, on a :
 	- doctype : qui dit "ici, on est dans une page html"
 	- html : qui déclare le début et la fin de la page
 	- head : qui donne des information générale et/ou technique sur la page
+	- title : le titre de la page (celui qui est affiché dans l'onglet de votre navigateur)
 	- body : qui contient le corps de la page (c'est là que sera votre contenu)
 
 Une fois que vous que vous êtes dans le corps du documents (<body>), c'est à vous de créer votre contenu.
