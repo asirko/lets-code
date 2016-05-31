@@ -29,5 +29,18 @@ body {
 .titre h2 {
     margin-left: 50px;
     color: rgb(130, 210, 255);
+    font-weight: normal;
     font-size: 1.5em;
+}
+
+.section h1 {
+    margin: 20px 0 20px 50px;
+    color: rgb(120, 150, 220);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.section p {
+    margin: 10px 0;
+    text-indent: 25px;
 }
