@@ -1,0 +1,326 @@
+<!-- 
+
+##############################################
+###### ça y est, vous êtes dans le code ######
+##############################################
+
+
+Plus précisément, le texte que vous êtes entrain de lire est un commentaire. (accrochez-
+vous dans votre lecture, j'ai été bavard !).
+
+Un commentaire est un texte qui n'a pas d'utilité en tant que code. 
+
+Et je vous le donne dans le mille ! Il sert précisément à permettre aux développeurs 
+de relire et de partager leur code. (Un jour, vous comprendrez quand vous aurez écris 
+un bout de code assez velu pour y avoir laissé un bout de votre chevelure ...)
+
+Il n'existe à ma connaissance aucun langage qui ne possède pas la possibilité d'écrire
+des commentaires ! Usez-en et abusez-en !
+
+Ah ! Vous vous demandez peut-être comment reconnaître un commentaire ? En HTML, le 
+commentaire commence par "<!--" (sans les "" hein !? ;-)) et finnissent par -->
+
+
+<!-- (rouverture parce que j'ai fermé le commentaire précédent ...)
+#############################################
+############ Premier exercice ! #############
+#############################################
+
+Ah ! Je ne vous ai pas prévenu, par-ci par-là, je vous proposerez des petits exercices 
+histoires de vraiment comprendre les notions que je vous montre !
+
+Pendant ces exercices, je pars du principe que vous utilisez le système d'exploitation
+Windows (il faut se rendre à l'évidence, il s'agit du système d'exploitation majoritaire).
+Si vous avez des difficultés pour réaliser les exercices, tennez moi au courant, j'ajusterais
+le contenu en fonction. 
+
+Les moutons ! L'exercice ! 
+
+Facile ! Copiez-collez tout le code de cette page dans un fichier sur votre 
+bureau. Pour ce faire, faite : clic droit sur votre bureau -> nouveau -> Document text 
+Une fois le fichier créé, ouvrez le avec blocnote de Windows et  collez-y tous le code 
+de cette page.
+Enregistrez et renommez le fichier, appelez-le comme vous voulez mais il faut finir par 
+".html" (par exemple: commeVousVoulez.html). 
+Enfin, faites clic droit sur le fichier -> ouvrir avec -> votre navigateur (chrome, firefox
+ou le troisième que je ne nommerai pas XD).
+
+### Résultat
+
+Magnifique ! Ou presque ..., les lettres accentuées ne s'affiche pas très bien, n'est-ce pas ?
+C'est normale, Windows nous a joué un petit tour. Je reviendrai sur ce problème plus tard,
+nous corrigerons ça !
+
+Néanmoins vous venez de créer votre page HTML ! Vous venez donc de faire un pas et non des 
+moindre vers mon objectif ! Faire de vous des développeurs web !
+
+### Pour allez plus loin !
+
+N'hésitez à triturer le code, le modifier et vérifier le résultat dans le navigateur !
+Par exemple retirez tous les gros commentaires du début du fichier pour vérifiez qu'il ne
+servent à rien (techniquement, je m'entends !).
+
+#########################################################
+########### Mais c'est codé comment l'HTML ? ############
+#########################################################
+
+Hum ! C'est vrai qu'avec toutes ces digression, je ne vous ai même pas présenté le langage !
+
+Et oui, HTML est un langage de programmation. Ce n'est peut-être pas un langage qui permet
+de coder les dernier jeux à la mode mais il est très important. Il permet de décrire les 
+élément de la page ! Il dit ce qui est un titre, ce qui est un paragraphe ... Et c'est très 
+important, sinon comment structurer notre page ? Comment mettre le titre en rouge pour 
+améliorer l'aspect esthétique ?
+
+En bref, l'HTML strucure une page ! 
+C'est un langage descriptif puisque sont utilité est de dire qu'est-ce qui est quoi !
+
+### Comment est-il construit ?
+
+HTML est composé de *balises* qui permet d'identifier une portion du contenu ou un emplacement
+dans le contenu. 
+
+Une balise est reconnu par <> qui entour un sigle ou mot.
+Par exemple <p> est la balise de paragraphe.
+
+Beaucoup de balise ont pour rôle de démarquer une portion du contenu. Pour identifier la fin 
+de ce contenu aussi bien que le début, il faut identifier aussi visiblement la balise de début
+que celle de fin. La balise qui ferme la démarquation, aussi appelée balise fermante, ressemble
+à : </balise>
+Par exemple </p> est la balise fermante du paragraphe
+
+Ainsi <p>bla bla</p> représente un paragraphe dans le contenu est "bla bla"
+
+Certaines balises ne délimitent pas de portion du contenu mais juste un endroit dans le contenu.
+Par exemple <br> n'a pas de balise fermante puisqu'elle indique un saut de ligne forcé (br est 
+l'abbréviation de break). Un saut de ligne est ponctuel pas besoin de dire qu'il se ferme juste
+après s'être ouvert ...
+
+**********************************************************************************************
+Le code HTML est un "arbre", chaque balise est appelé noeud et peut-être représenté comme une 
+ramification de l'arbre.
+**********************************************************************************************
+
+Cette phrase peu sembler abstraite mais elle est très importante ! (j'y reviendrez probablement 
+souvent).
+Elle sous-entends qu'une balise peut contenir d'autre balise donc :
+	<p>bla bla <br> blo blo</p>
+ou :
+	<p>Je suis dans un paragraphe <strong>et je suis le passage important du paragraphe</strong></p>
+est autorisé ! (strong est une balise pour souligner l'importance d'une portion du contenu).
+
+Lorsque des balises sont incluses l'une dans l'autre, on parle souvent de balise parents et enfants.
+Dans le cas "<p><strong></strong></p>", "p" est la balise parent et "strong" la balise enfant.
+
+Mais au contraire, deux éléments ne peuvent pas ce chevaucher donc :
+	<p> <strong> </p> </strong>
+N'est pas autorisé !
+
+Voyez les balises comme des poupées gigognes (ces poupées russes qui s'emboitent les unes dans les
+autres).
+
+###############################################################################
+###################### Ok pour les balise, c'est tout ? #######################
+###############################################################################
+
+Les balises ne sont pas toujours suffisantes seules. Elles ont parfois besoin d'informations 
+supplémentaires ...
+
+Un exemple : pour faire un lien entre 2 pages, il existe la balise <a>.
+Question, si j'écris <a>Un lien</a> savez vous quel est la page de destinantion de "Un lien" ?
+Normalement, vous ne devriez pas savoir ...
+
+Pour qu'une balise porte plus d'information que son seul nom, on peut lui ajouter des arguments.
+Les arguments ajoutent des informations supplémentaires et spécifique à une balise.
+
+Reprenons notre exemple de la balise <a>, elle possède un argument très utile : href (pour hyperlink 
+reference). En renseignant la valeur de cet argument, on pourra explicitement désigner l'adresse vers 
+laquel le lien pointe ! Ce qui donne :
+	<a href="www.un-lien.fr">Un lien</a>
+Ici "Un lien" permet d'accéder à la page "www.un-lien.fr". Et on remarque que les arguments sont inscris
+directement dans la balise ouvrante !sous la forme :
+	<nomBalise nomArgument="valeur de l'argument">
+
+
+###############################################################################
+########## Ok pour les arguments mais on met quoi ? Ce qu'on veux ? ###########
+###############################################################################
+
+NON !!! Pauvre fou ! (ne fuyez pas, hein ?!)
+
+L'HTML est un langage, il a une synthaxe, je n'ai pas choisi "p" et "br" au hazard, ce sont des 
+balises du langage. De même pour les arguments. Tout est codifié.
+
+Malheureusement, je ne peux pas me permettre dans cette introduction de faire un listing des balises
+qui existent. Dans la conclusion, je vous renverai vers des sites qui pourront vous appuier dans vos
+recherche !
+
+######################################################################################################
+########### Balise, OK ! Synthaxe, OK ! Mais l'ordre, je peux faire ce que je veux, non ? ############
+######################################################################################################
+
+Oui ... et non ...
+D'abord, une page html possède une structure de base imposé :
+	
+<!doctype html>
+<html>
+	<head>
+		<title>a</title>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+Dans cette structure, on a :
+	- doctype : qui dit "ici, on est dans une page html"
+	- html : qui déclare le début et la fin de la page
+	- head : qui donne des information générale et/ou technique sur la page
+	- title : le titre de la page (celui qui est affiché dans l'onglet de votre navigateur)
+	- body : qui contient le corps de la page (c'est là que sera votre contenu)
+
+Une fois que vous que vous êtes dans le corps du documents (<body>), c'est à vous de créer votre contenu.
+
+Et là, certaines balises viennent avec des contraintes, par exemple :
+	<li> ne peut pas être utilisé dans tous les cas !
+	<li> est la balise des "list item" ou élément de liste en bon français. Pour l'utiliser, il faut être 
+	dans une liste. Et en HTML, il existe 2 listes <ul> et <ol> (respectivement pour "unordered list" soit 
+	liste à tiret et "ordered list" soit liste numéroté).
+Donc une écriture valide de <li> serait :
+	<ul>
+		<li></li>
+	</ul>
+
+######################################################################################################
+###################### Ça commence à faire beaucoup, dit moi que c'est tout ? ########################
+######################################################################################################
+
+Malheureusement, non ... Il y a encore beaucoup de chose à dire, mais pour cette introduction, c'est 
+suffisant !
+
+Dans la suite de la page, vous allez enfin rentrer dans le code, je l'ai agrémenté de commentaires (plus 
+succinct XD). Survolez-le ! et à la toute fin du document, je vous donne le lien pour aller vers la 
+conclusion.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- le titre s'affiche dans l'onglet de votre navigateur essayez de le changer ! -->
+	<title>Le script HTML : introduction</title>
+
+	<!-- meta est une balise très avancée, ce n'est pas le moment de rentrer dans le détail ici ! 
+	Essayer juste de changer la valeur de l'argument charset, faites la passer de "utf-8" à "iso-8859-1".
+	Enregistrez et rouvrez le document avec votre navigateur -->
+	<meta charset="utf-8">
+	<!-- Magique ! Les accents ont été corrigés ! Alors, non, je ne vous ai pas trollé, c'est Windows et
+	plus particulièrement blocnote qui a changé "l'encodage" du code que vous aviez copié. 
+	Alors, ce n'est pas le moment de parler de l'encodage mais pour votre information : j'ai créé cette 
+	page en utf-8 (d'où mon charset à utf-8) et blocnote vous l'a changé sans rien vous demander ni même 
+	vous prévenir ! 
+	Sans rentrer dans le détail, il faut savoir que l'encodage est un sujet épineux (et j'y reviendrai 
+	sûrement un jour). Ce sujet a déjà poussé plusieurs développeurs à se mettre en position foetal sous 
+	leur bureau ... -->
+</head>
+<!-- le <body> enfin les choses sérieuses ! -->
+<body>
+
+	<!-- <h1> : balise de tritre de niveau 1 -->
+	<h1>La première des briques d'une page : le script HTML</h1>
+
+	<!-- <h2> ! balise de tritre de niveau 2 -->
+	<h2>Un parmi d'autres</h2>
+
+	<!-- <p> les paragraphe -->
+	<p>
+		Plusieurs langages différents sont nécessaire pour créer un page web !
+	</p>
+
+	<p>
+		<!-- <strong> pour renforcer une portion du texte -->
+		<strong>Attendez ! N'ayez pas peur !</strong>
+		Il y a certe plusieurs langages pour faire les sites les plus célèbres que vous connaissez ! 
+		Mais je vais y aller en douceur pour vous les présenter. <br> <!-- forcer un saut de ligne -->
+		D'ailleur, cette page n'utilise que de l'HTML. Rien d'autre ! (c'est en partie pour celà qu'elle 
+		est aussi inesthétique).
+	</p>
+
+	<h2>Chacun son rôle !</h2>
+
+	<p>
+		J'entends déjà les plus revêches d'entre vous, s'exclamant : <em>Mais pourquoi plusieurs ! 
+		C'est ajouter de la complexité là où il n'y en a pas besoin !</em>
+		<!-- <em> est assez proche de <strong>, permet également de mettre en avant une portion du contenu -->
+	</p>
+
+	<p>
+		Et comme souvent sur ce site, je vous répondrai : <em>Oui ! Mais ...</em> (et là je risque 
+		d'être un peu théorique, faites moi confiance, avec les prochaines pages, vous y verez plus 
+		claire). <br>
+		Un langage de programmation est un outil, il est réfléchit et créé dans le but de résoudre 
+		certains problèmes. Suivant le problème, le langage ne fonctionnera pas de la même manières !
+	</p>
+	<p>
+		Je vais vous faire une analogie, imaginez en cuisine : <br>
+		Est-il possible de faire un plat avec un et un seul instrument ? Dans les cas très simple peut-être,
+		mais en général non ! <br>
+		Chaque instrument (couteaux, casseroles, plaques de cuisson, ...) ont un rôle qui permet de réaliser 
+		un objectif (trancher, contenir, chauffer, ...) ! <br>
+		En programmation, certain programme simple n'ont besoin que d'un seul langage mais des que l'objectif
+		se complique, il peut peut-être être plus judicieux d'utiliser plusieurs outils différents.
+	</p>
+
+	<p>
+		Si aujourd'hui quelqu'un vennait vers moi en me disant : <em>J'ai trouvé un langage ! Tu vas 
+		voir, avec celui là, je peux tout faire même le café !</em><br>
+		Ma première réaction risque d'être du scepticisme.
+	</p>
+
+	<p>
+		Dans un site internet, il y a beaucoup de chose à gérer, et ces choses sont trop différentes 
+		pour être traitées par un et un seul langage ! Chaque outil/langage qui permet de créer un 
+		site internet a un ensemble de responsabilité définit !<br>
+	</p>
+	<p>
+		Parmis les responsabilités que l'on peut citer aujourd'hui sans trop vous embrouiller, il y a :
+		<ul> <!-- <ul> liste non-ordonnée -->
+			<li> <!-- <li> élément de la liste -->
+				La <strong>sémantique</strong> de la page : dire qu'est-ce qui est quoi, où commence la 
+				page ? Quelle portion du texte correspond au titre ? ...
+			</li>
+			<li>
+				L'<strong>esthétique</strong> de la page : qu'elle est la taille d'un titre ? Est-il centré ? 
+				Serré à droite ? ...
+			</li>
+			<li>
+				Le <strong>dynamisme</strong> de la page : comment les choses bouges ? Comment faire un 
+				bouton capable d'afficher une image ou de la masquer ? ...
+			</li>
+		</ul>
+		Et il y a encore d'autres éléments que je vous présenterai au fil de l'introduction.
+	</p>
+
+	<p>
+		Revenons à nos moutons ! L'HTML est responsable de la sémantique ! C'est lui qui permet de dire : 
+		<em>Ce bout de texte est un titre et celui-là un paragraphe</em>.
+	</p>
+
+	<h2>Vous voulez voir ?</h2>
+
+	<p>
+		Vous pouvez afficher le code de cette page très simplement en faisant un clic-droit sur la page et 
+		en sélectionnant : <em>Afficher le code source de la pages</em> pour Chrome et <em>Code source de la
+		page</em> pour Firefox.<br>
+		<strong>Allez-y essayé !</strong>
+	</p>
+
+</body>
+</html>
+
+
+<!-- 
+
+Bon, pour le débrief, allons plutôt sur une autre page : www.lets-code.fr/html/conclusion.html
+
+ -->
