@@ -1,14 +1,24 @@
+/* Voila un commentaire CSS et vous voilà dans le code CSS */
+
+/* 
+Ici encore, je ne rentrerai pas dans le détail et la synthaxe mais vous pouvez essayer de survoler le code.
+Je l'ai agrémenté de quelque commentaire ...
+*/
+
+/* Pour tous les éléments de la page : élimine des espacements spécifique au différents navigateur et uniformise la taille de la police d'écriture */
 * {
     margin: 0;
     padding: 0;
     font-size: 16px;
 }
 
+/* Pour le body : colorisation du fond + ajout du distance forcé entre le bord du body et le bord des éléments contenu */
 body {
     padding: 0 20px;
     background-color: rgb(220, 220, 220);
 }
 
+/* Dimensionne et colore les éléments avec les classes "titre" et "section" */
 .titre,
 .section {
     width: calc(100% - 40px);
@@ -19,6 +29,7 @@ body {
     box-shadow: 0 0 10px rgb(140, 140, 140);
 }
 
+/* les titres principaux du block de titre de la page */
 .titre h1 {
     margin-left: 50px;
     color: rgb(120, 150, 220);
@@ -26,6 +37,7 @@ body {
     font-size: 2.5em;
 }
 
+/* les titres secondaire du block de titre de la page */
 .titre h2 {
     margin-left: 50px;
     color: rgb(130, 210, 255);
@@ -33,6 +45,7 @@ body {
     font-size: 1.5em;
 }
 
+/* les titres des sections */
 .section h1 {
     margin: 20px 0 20px 50px;
     color: rgb(120, 150, 220);
@@ -40,7 +53,37 @@ body {
     font-size: 1.5em;
 }
 
+.section h2 {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* les paragraphes des sections */
 .section p {
     margin: 10px 0;
     text-indent: 25px;
+}
+
+.section ul {
+    padding: 0;
+    margin: 0 0 0 25px;
+    list-style: none;
+}
+.section ul li:before {
+    margin-right: 5px;
+    content: "►";
+    font-size: .8em;
+    color: rgb(120, 150, 220);
+}
+
+
+/* gère l'affichage des citation de code */
+.code {
+    font-family: "Courier New";
+    background-color: rgb(220, 220, 220);
+}
+div.code {
+    padding: 5px;
+    margin-left: 25px;
+    white-space: pre;
 }
