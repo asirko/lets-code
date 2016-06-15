@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /* Voila un commentaire CSS et vous voilà dans le code CSS */
 
 /* 
@@ -14,16 +16,16 @@ Je l'ai agrémenté de quelque commentaire ...
 
 /* Pour le body : colorisation du fond + ajout du distance forcé entre le bord du body et le bord des éléments contenu */
 body {
-    padding: 0 20px;
+    padding: 0 20px 60px;
     background-color: rgb(220, 220, 220);
 }
 
 /* Dimensionne et colore les éléments avec les classes "titre" et "section" */
 .titre,
 .section {
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     max-width: 900px;
-    padding: 20px;
+    padding: 20px 40px;
     margin: 20px auto;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px rgb(140, 140, 140);
@@ -60,22 +62,30 @@ body {
 
 /* les paragraphes des sections */
 .section p {
-    margin: 10px 0;
-    text-indent: 25px;
+    margin: 15px 0;
+    text-indent: 20px;
 }
 
+/* les listes non-ordonnées */
 .section ul {
     padding: 0;
-    margin: 0 0 0 25px;
+    margin: 0;
     list-style: none;
 }
+
+/* le symbole de liste */
 .section ul li:before {
-    margin-right: 5px;
+    margin-right: 6px;
     content: "►";
-    font-size: .8em;
+    font-size: .7em;
     color: rgb(120, 150, 220);
 }
 
+/* Le pied de page */
+.pied-de-page {
+    text-align: center;
+    font-weight: bold;
+}
 
 /* gère l'affichage des citation de code */
 .code {

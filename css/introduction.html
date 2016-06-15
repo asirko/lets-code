@@ -1,13 +1,13 @@
 <html>
 <head>
-    <title>Le style CSS : introduction</title>
+    <title>Le style CSS</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
     <div class="titre">
-        <h1>Gérer les styles avec le CSS</h1>
-        <h2>Introduction</h2>
+        <h1>Gérer les styles et le design</h1>
+        <h2>Le langage CSS</h2>
     </div>
 
     <div class="section">
@@ -23,24 +23,24 @@
         </p>
         <p>
             Pour accéder au code CSS, vous avez 2 méthodes :
-            <ul>
-                <li>
-                    En ouvrant le code source de la page, vous trouverai <span class="code">&lt;link rel=&quot;stylesheet&quot; 
-                    type=&quot;text/css&quot; href=&quot;./style.css&quot;&gt;</span> dans l'élément <em>head</em>, 
-                    <span class="code">./style.css</span> est un lien vers le fichier CSS utilisé pour la page.
-                </li>
-                <li>
-                    En allant directement à l'adresse du fichier CSS qui n'est autre que <a href="http://www.lets-code.fr/css/style.css">lets-code.fr/css/style.css</a>.
-                </li>
-            </ul>
         </p>
+        <ul>
+            <li>
+                En ouvrant le code source de la page, vous trouverai <span class="code">&lt;link rel=&quot;stylesheet&quot; 
+                type=&quot;text/css&quot; href=&quot;./style.css&quot;&gt;</span> dans l'élément <em>head</em>, 
+                <span class="code">./style.css</span> est un lien vers le fichier CSS utilisé pour la page.
+            </li>
+            <li>
+                En allant directement à l'adresse du fichier CSS qui n'est autre que <a href="http://www.lets-code.fr/css/style.css">lets-code.fr/css/style.css</a>.
+            </li>
+        </ul>
     </div>
 
      <div class="section">
         <h1>Des langages différents mais comment les lier ?</h1>
         
         <p>
-            Effectivement, les plus vifs d'entre vous on mis le doigt ou ça fait mal ! Dans l'introduction de l'HTML,
+            Effectivement, les plus vifs d'entre vous ont mis le doigt ou ça fait mal ! Dans l'introduction de l'HTML,
             j'ai insité sur le faite qu'il y a plusieurs langages pour faire une page web. Mais ça ne vous aide pas 
             du tout pour comprendre comment les articuler ensemble.
         </p>
@@ -62,26 +62,62 @@
 
         <p>
             Là encore bougres esprits malicieux, vous êtes au coeur du problème : l'HTML est lié au contenu mais si le CSS est séparé de l'HTML, 
-            il est aussi séparé du contenu !
-        </p>
-
-        <h2>Rappel : </h2>
-
-        <p>
-            L'HTML décrit <strong>qu'est-ce qui est quoi</strong> ! Donc si l'on sait identifier un élément (ou groupe d'éléments) HTML particulié(s),
-            on n'a plus besoin du contenu ! Le contenu peut être ciblé à travers l'HTML qui le décrit.
+            alors il le sera aussi du contenu !
         </p>
     </div>
 
      <div class="section">
         <h1>L'HTML, le socle du CSS (entre autre)</h1>
+
+        <p>
+            L'HTML décrit <strong>qu'est-ce qui est quoi</strong> ! Donc si l'on sait identifier un élément (ou groupe d'éléments) HTML particulié(s),
+            on n'a plus besoin du contenu ! Le contenu peut être ciblé à travers l'HTML qui le décrit.
+        </p>
+
         <p>
             Désolé de radoter mais c'est important !
         </p>
 
         <p>
-            L'HTML est l'ossature du contenu d'un page web, en suivant les articulations, on peut atteindre les éléments souhaités. Et sans 
+            L'HTML est l'ossature du contenu d'une page web, en suivant ses articulations, on peut atteindre les éléments souhaités. Et sans 
             vouloir choquer vos coeurs innocents, cette ossature sert beaucoup !
-        </p>    </div>
+        </p>
+
+        <p>
+            Le CSS se sert ce ce squelette pour le couvrir de vêtement avec des couleurs et des formes qui accroche le regard.
+        </p>
+    </div>
+
+    <div class="section">
+        <h1>Des couleurs et des formes, c'est tout ?</h1>
+
+        <p>
+            Oula non, pauvre fou ! Je ne veux pas me faire méprendre ! Le CSS est une discipline très vaste dont les techniques prennent
+            énormément de temps à acquérir. Ce langage est composé de très nombreuse propriétés d'apparence (qui ne fonctionnent pas toutes très 
+            bien ensemble). Sans compter que l'apprence d'une page dépend très directement de la surface d'écran disponible. Imaginez la 
+            différence entre un smartphone et un écran plat super large connecté !
+        </p>
+
+        <p>
+            Et ces mêmes techniques ne sont que très peu de choses sans un minimum d'esprit artistique. Le CSS est pour une grande part 
+            un vecteur d'expression qui permet de donner une identité à un site internet. Il l'habile, certe, mais lui donne un corps, 
+            une identité.
+        </p>
+
+        <p>
+            De nombreux sujets sont intimement liés au design. Comme l'ergonomie qui cherche par exemple à identifier les facteurs 
+            "d'utilisabilité" d'une application pour la rendre plus simple et intuitive. Ou l'accessibilité qui assure au plus grand
+            nombre une expérience d'utilisation optimal (en prennant en compte certains handicapes comme une diminution de l'aquité 
+            visuel ou une mauvaise perception des couleurs). D'ailleur on parle assez souvant d'<strong>UIX</strong> (pour User Interaction 
+            and Experience).
+        </p>
+
+        <p>
+            Cette page est un bien maigre exemple : elle ne prend pas en compte les écrans de petite taille, elle est très simple (pour ne 
+            pas dire plate). Mais elle permet au moins d'avoir un comptenu lisible et c'est ma principale préocupation jusqu'à la fin de cette introduction !
+        </p>
+    </div>
+
+    <div class="pied-de-page">sirko.alexandre@gmail.com</div>
 </body>
 </html>
